@@ -4,8 +4,6 @@ sequenceDiagram
     participant browser
     participant server
 
-    // GET spa html
-
     user->>browser: GOTO https://studies.cs.helsinki.fi/exampleapp/spa
     browser->>server: GET spa.html document
     server-->>browser: HTML document
