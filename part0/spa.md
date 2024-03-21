@@ -13,6 +13,6 @@ sequenceDiagram
     server-->>browser: JavaScript document
     browser->>server: GET data.json
     server-->>browser: JSON document
-    Note to right of user: Browser executes scripts and runs the xhttp request to retrieve current notes data
+    Note right of user: Browser executes scripts and runs the xhttp request to retrieve current notes data
     browser-->>user: Application
 ```
