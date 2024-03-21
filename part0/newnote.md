@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
 	participant user
 	participant browser
@@ -8,3 +9,4 @@ sequenceDiagram
 	Note right of user: POST {"note": "New Note", "date": "2024-3-21"} to /exampleapp/new_note on server
 	browser-->>user: Refresh https://studies.cs.helsinki.fi/exampleapp/notes
 	Note right of user: "New Note" note appended to note list
+```
