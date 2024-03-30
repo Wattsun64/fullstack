@@ -31,14 +31,18 @@ const App = () => {
     return persons.filter(person => person.name.toLocaleLowerCase() == name.toLocaleLowerCase()).length > 0
   }
 
+  const reset = () => {
+    setNewName('')
+    setNewPhoneNumber('')
+  }
+
   const handlePersonSubmit = (evt) => {
     evt.preventDefault();
     if (!nameExistsOrNot(newName))
       setPersons(persons.concat({name: newName, number: newPhoneNumber}))
     else 
       window.alert(`${newName} is already added to phonebook`)
-    setNewName('')
-    setNewPhoneNumber('')
+    reset()
   }
 
   const filteredPersons = persons.filter(person => person.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
