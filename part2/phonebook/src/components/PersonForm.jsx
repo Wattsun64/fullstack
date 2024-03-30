@@ -1,7 +1,7 @@
 import Button from "./Button"
 import Input from "./Input"
 
-const Form = ({name, number, nameHandler, numberHandler, submitHandler}) => {
+const Form = ({ name, number, nameHandler, numberHandler, submitHandler }) => {
   return (
     <>
       <form>
