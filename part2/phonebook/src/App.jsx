@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Phonebook from './components/Phonebook'
 import Search from './components/Search'
 import Form from './components/PersonForm'
+import Button from './components/Button'
 
 const App = () => {
   const [persons, setPersons] = useState([
@@ -36,6 +37,10 @@ const App = () => {
     setNewPhoneNumber('')
   }
 
+  const clear = () => {
+    setSearch('')
+  }
+
   const handlePersonSubmit = (evt) => {
     evt.preventDefault();
     if (!nameExistsOrNot(newName))
@@ -51,6 +56,7 @@ const App = () => {
     <div>
       <h2>Phonebook</h2>
       <Search value={search} onInputHandler={handleSearch} />
+      <Button text="Clear" onClickHandler={clear} />      
       <h3>Add a new</h3>
       <Form
         name={newName} nameHandler={handleNewPersonInput}
